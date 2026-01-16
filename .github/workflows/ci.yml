@@ -28,3 +28,10 @@ jobs:
 
     - name: Run tests
       run: dotnet test --no-build --configuration Release --logger "trx;LogFileName=test_results.trx"
+
+    - name: Publish Test Results
+      uses: dorny/test-reporter@v1
+      with:
+        name: .NET Tests
+        path: '**/TestResults/*.trx'
+        reporter: dotnet-trx
