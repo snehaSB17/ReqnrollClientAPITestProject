@@ -12,7 +12,7 @@
 https://restful-api.dev/
 
 ## How to Run Tests
-1. Clone the repo
+1. Clone the repo https://github.com/snehaSB17/ReqnrollClientAPITestProject
 2. Open solution in Visual Studio
 3. Restore NuGet packages
 4. Run tests via Test Explorer or:
