@@ -36,3 +36,5 @@ The pipeline is defined in `.github/workflows/ci.yml`.
 
 ```yaml
 name: CI Pipeline
+
+Published test results are available under latest workflow on ".Net Test" link
