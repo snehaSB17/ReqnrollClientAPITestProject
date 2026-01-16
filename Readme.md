@@ -22,6 +22,7 @@ https://restful-api.dev/
 ## CI Pipeline
 
 This project uses **GitHub Actions** for continuous integration.
+To navigate pipeline click here
 [![CI](https://github.com/snehaSB17/ReqnrollClientAPITestProject/actions/workflows/ci.yml/badge.svg)](https://github.com/snehaSB17/ReqnrollClientAPITestProject/actions/workflows/ci.yml)
 
 ### 🔄 Workflow
