@@ -20,6 +20,17 @@ https://restful-api.dev/
 5. Test result report will be generated under folder /bin/Debug/net8.0/report/living_doc.html . 
 
 ## CI Pipeline
-- GitHub Actions
-- Runs on every push and pull request
-- Executes all automated API tests
+
+This project uses **GitHub Actions** for continuous integration.
+
+### 🔄 Workflow
+- Runs automatically on every **commit** or **pull request** to the `master` branch.
+- Builds the project using .NET.
+- Executes all automated tests.
+- Publishes test results as artifacts in the Actions tab.
+
+### 📂 Workflow File
+The pipeline is defined in `.github/workflows/ci.yml`.
+
+```yaml
+name: CI Pipeline
