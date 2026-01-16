@@ -12,11 +12,11 @@
 https://restful-api.dev/
 
 ## How to Run Tests
-1. Clone the repo https://github.com/snehaSB17/ReqnrollClientAPITestProject
+1. Clone the repo (url - https://github.com/snehaSB17/ReqnrollClientAPITestProject)
 2. Open solution in Visual Studio
 3. Restore NuGet packages
-4. Run tests via Test Explorer or:
-   dotnet test
+4. Run tests via Test Explorer under Test tab or:
+   Open Terminal under view tab and Enter command "dotnet test" to run all test cases 
 5. Test result report will be generated under folder /bin/Debug/net8.0/report/living_doc.html . 
 
 ## CI Pipeline
