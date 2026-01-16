@@ -349,6 +349,9 @@ await this.FeatureBackgroundAsync();
 #line 41
  await testRunner.ThenAsync("I expect Statuscode to be \"200\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
+#line 42
+ await testRunner.AndAsync("I expect responce message", "   {\"message\":\"Object with id = {id} has been deleted.\"}", ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
             }
             await this.ScenarioCleanupAsync();
         }
@@ -363,7 +366,7 @@ await this.FeatureBackgroundAsync();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Get multiple objects by IDs", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 43
+#line 47
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -376,16 +379,16 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line 3
 await this.FeatureBackgroundAsync();
 #line hidden
-#line 44
+#line 48
  await testRunner.GivenAsync("I constructs \"GET\" for \"objects?id=1&id=2&id=7\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 45
+#line 49
  await testRunner.WhenAsync("I submit the request", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 46
+#line 50
  await testRunner.ThenAsync("I expect Statuscode to be \"200\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 47
+#line 51
  await testRunner.AndAsync("the response should contain objects with ids \"1\", \"2\", and \"7\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }

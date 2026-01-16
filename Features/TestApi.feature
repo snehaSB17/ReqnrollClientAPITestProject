@@ -39,6 +39,10 @@ Scenario: Delete Request
 	Given I constructs "DELETE" for "objects/{id}"
 	When I submit the request 
 	Then I expect Statuscode to be "200"
+	And I expect responce message 
+	  """  
+      {"message":"Object with id = {id} has been deleted."}
+      """
 
 Scenario: Get multiple objects by IDs 
 	Given I constructs "GET" for "objects?id=1&id=2&id=7"

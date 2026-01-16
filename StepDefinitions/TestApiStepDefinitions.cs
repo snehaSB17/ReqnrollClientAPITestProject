@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Newtonsoft.Json;
+using NUnit.Framework;
 using Reqnroll;
 using ReqnrollClientAPITestProject.Models;
 using ReqnrollClientAPITestProject.Utilities;
@@ -105,6 +106,15 @@ namespace ReqnrollClientAPITestProject.StepDefinitions
             var data = JsonConvert.DeserializeObject<List<Objects>>(RestFactory.RestResponse.Content); 
             data.Select(o => o.id).Should().Contain(new[] { id1, id2, id3 });
         }
+
+        [Then("I expect responce message")]
+        public void ThenIExpectResponceMessage(string verifyMessage)
+        {
+            string statusMessage = RestFactory.RestResponse.Content;
+            string message = verifyMessage.Replace("{id}", RestFactory.RestResponse.ResponseUri.Segments[2]);
+            Assert.That(message.Trim(), Is.EqualTo(statusMessage));
+        }
+
 
     }
 }
