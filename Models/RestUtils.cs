@@ -4,11 +4,22 @@ namespace ReqnrollClientAPITestProject.Models
 {
     public class RestUtils
     {
-        
+        private readonly string _baseUrl;
+
+        public RestUtils(string baseUrl) 
+        {
+            if (string.IsNullOrWhiteSpace(baseUrl)) 
+                throw new ArgumentException("Base URL cannot be null or empty", nameof(baseUrl)); 
+            _baseUrl = baseUrl; 
+        }
         public static void InitialiseRestClient(string endpoint)
         {
-            RestFactory.RestClient = new RestClient(endpoint);
-            RestFactory.RestUtils = new RestUtils();
+            var baseUrl = ConfigReader.GetBaseUrl();
+            if (string.IsNullOrEmpty(baseUrl)) 
+                throw new InvalidOperationException("Base URL is missing in configuration."); 
+            var fullUrl = new Uri(new Uri(baseUrl.TrimEnd('/')), endpoint.TrimStart('/')); 
+            RestFactory.RestClient = new RestClient(fullUrl); 
+            RestFactory.RestUtils = new RestUtils(baseUrl);
         }
 
         public static void InitialiseGetMethod()

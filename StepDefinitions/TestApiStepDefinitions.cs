@@ -29,7 +29,7 @@ namespace ReqnrollClientAPITestProject.StepDefinitions
                 endpoint = endpoint.Replace("{id}", id);
             }
 
-            RestUtils.InitialiseRestClient("https://api.restful-api.dev/" + endpoint);
+            RestUtils.InitialiseRestClient(endpoint);
 
             switch (httpMethod)
             {
