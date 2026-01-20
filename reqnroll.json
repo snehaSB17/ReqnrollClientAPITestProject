@@ -3,5 +3,7 @@
 
   "formatters": {
     "html": { "outputFilePath": "report/living_doc.html" }
-  }
+  },
+
+  "apiSettings": { "baseUrl": "https://api.restful-api.dev/" }
 }
